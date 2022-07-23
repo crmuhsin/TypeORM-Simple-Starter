@@ -1,9 +1,9 @@
-import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn, CreateDateColumn, UpdateDateColumn} from "typeorm";
-import {Length} from 'class-validator';
-import {User} from './User';
+import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn, CreateDateColumn, UpdateDateColumn } from "typeorm";
+import { Length } from 'class-validator';
+import { User } from './User';
 
 @Entity()
-export class UserInfo{
+export class UserInfo {
 
     @PrimaryGeneratedColumn()
     id: number;
@@ -12,16 +12,16 @@ export class UserInfo{
     @Length(4, 20)
     phone: number;
 
-    @Column({name: "Sex"})
+    @Column({ name: "Sex" })
     sex: string;
 
-    @Column({name: "Date of Birth"})
+    @Column({ name: "Date of Birth" })
     dob: Date;
 
-    @Column({name: "Address"})
+    @Column({ name: "Address" })
     address: string;
 
-    @Column({name: "Photo"})
+    @Column({ name: "Photo" })
     photo: string;
 
     @OneToOne(type => User)
@@ -31,11 +31,11 @@ export class UserInfo{
     @Column()
     @CreateDateColumn()
     createdAt: Date;
-  
+
     @Column()
     @UpdateDateColumn()
     updatedAt: Date;
-  
+
 }
 
 

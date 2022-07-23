@@ -1,10 +1,10 @@
-import {Router} from 'express';
+import { Router } from 'express';
 import UserInfoController from '../controllers/UserInfoController';
-import {validateJwt} from '../middlewares/validateJwt';
-import {validateRole} from '../middlewares/validateRole';
-import {uploadUserImageMiddleware} from '../middlewares/uploadUserImageMiddleware';
+import { validateJwt } from '../middlewares/validateJwt';
+import { validateRole } from '../middlewares/validateRole';
+import { uploadUserImageMiddleware } from '../middlewares/uploadUserImageMiddleware';
 
-const router= Router(); 
+const router = Router();
 
 
 //Create patient info
